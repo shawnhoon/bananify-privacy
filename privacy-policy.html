@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bananify Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        h1 {
+            color: #0F172A;
+            border-bottom: 3px solid #FACC15;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0F172A;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #64748B;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #FEF3C7;
+            padding: 15px;
+            border-left: 4px solid #FACC15;
+            margin: 20px 0;
+        }
+        a {
+            color: #2563EB;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #E5E7EB;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bananify Privacy Policy</h1>
+    <p class="last-updated"><strong>Last Updated:</strong> December 23, 2024</p>
+
+    <div class="highlight">
+        <strong>Privacy-First Design:</strong> Bananify is built with privacy as a core principle. All data is stored locally in your browser. We only send selected text to Google's Gemini API for image generation - nothing else.
+    </div>
+
+    <h2>Overview</h2>
+    <p>Bananify is a Chrome extension that generates visual infographics from selected webpage text using Google's Gemini AI. This privacy policy explains how we handle your data and what information is collected, stored, and transmitted.</p>
+
+    <h2>Data Collection</h2>
+    <p>Bananify collects minimal data necessary for its core functionality:</p>
+    <ul>
+        <li><strong>Selected Text Content:</strong> When you select text on a webpage and generate an infographic, we collect the text you selected. This text is sent to Google's Gemini API for processing and stored locally with the generated infographic for your reference.</li>
+        <li><strong>Page Metadata:</strong> We capture the URL and title of the webpage where you selected text. This is stored locally with your infographic to provide context.</li>
+        <li><strong>Authentication Information:</strong> 
+            <ul>
+                <li>For BYOK (Bring Your Own Key) mode: We store your Google Gemini API key locally, encrypted using Web Crypto API (AES-GCM).</li>
+                <li>For backend mode: We use Google Sign-In OAuth tokens for authentication. These tokens are stored locally and used only for API authentication.</li>
+            </ul>
+        </li>
+        <li><strong>Usage Statistics:</strong> We track generation counts and timestamps locally for cost estimation purposes. This data never leaves your browser.</li>
+        <li><strong>Generated Infographics:</strong> All generated infographic images are stored locally in your browser's IndexedDB.</li>
+    </ul>
+
+    <p><strong>What We Do NOT Collect:</strong></p>
+    <ul>
+        <li>Personally identifiable information (names, addresses, email addresses)</li>
+        <li>Browsing history or web pages you visit</li>
+        <li>Location data or IP addresses</li>
+        <li>Financial or payment information</li>
+        <li>Health information</li>
+        <li>Personal communications</li>
+        <li>User activity monitoring (clicks, mouse position, keystrokes)</li>
+        <li>Telemetry or analytics data</li>
+    </ul>
+
+    <h2>Data Storage</h2>
+    <p>All data collected by Bananify is stored <strong>locally in your browser</strong> using Chrome's storage APIs:</p>
+    <ul>
+        <li><strong>Chrome storage.local:</strong> Settings, preferences, encrypted API keys, and usage statistics</li>
+        <li><strong>IndexedDB:</strong> Generated infographic images and metadata</li>
+        <li><strong>Chrome storage.session:</strong> Temporary session data (encryption passwords, if used)</li>
+    </ul>
+    <p><strong>No data is stored on external servers.</strong> Everything remains in your browser and can be deleted at any time.</p>
+
+    <h2>Data Transmission</h2>
+    <p>Bananify transmits data only in the following circumstances:</p>
+    <ul>
+        <li><strong>To Google Gemini API:</strong> When you generate an infographic, the text you selected and your configured prompts are sent to Google's Gemini API at <code>https://generativelanguage.googleapis.com/*</code>. This is the only external data transmission. All communication is encrypted via HTTPS.</li>
+        <li><strong>To Google Sign-In:</strong> If you use backend mode, authentication requests are sent to Google's OAuth servers for sign-in. We do not receive or store your Google account information beyond what's necessary for authentication.</li>
+    </ul>
+    <p>We do not transmit data to any other third-party services, analytics platforms, or advertising networks.</p>
+
+    <h2>Third-Party Services</h2>
+    <h3>Google Gemini API</h3>
+    <p>Bananify uses Google's Gemini API to generate infographics. When you generate an infographic:</p>
+    <ul>
+        <li>The text you selected is sent to Google's servers</li>
+        <li>Your configured prompts and settings are included</li>
+        <li>Google processes this data and returns a generated image</li>
+    </ul>
+    <p>Google's use of this data is governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. We recommend reviewing Google's privacy policy to understand how they handle data sent to their API.</p>
+
+    <h3>Google Sign-In</h3>
+    <p>If you use backend mode, authentication is handled through Google Sign-In. Google's use of authentication data is governed by their privacy policy. We do not receive or store your Google account email or other personal information.</p>
+
+    <h2>Data Security</h2>
+    <ul>
+        <li><strong>Encryption:</strong> API keys are encrypted using Web Crypto API (AES-GCM) before storage</li>
+        <li><strong>Local Storage:</strong> All data remains in your browser - no external servers store your information</li>
+        <li><strong>HTTPS:</strong> All external communication is encrypted via HTTPS</li>
+        <li><strong>No Plaintext Storage:</strong> Sensitive data (API keys) is never stored in plaintext</li>
+    </ul>
+
+    <h2>Your Rights and Control</h2>
+    <p>You have complete control over your data:</p>
+    <ul>
+        <li><strong>Delete Data:</strong> You can delete all extension data at any time through the extension settings</li>
+        <li><strong>Export Data:</strong> You can download all generated infographics from the gallery</li>
+        <li><strong>Revoke Access:</strong> You can remove your API key or sign out at any time</li>
+        <li><strong>Uninstall:</strong> Uninstalling the extension removes all locally stored data</li>
+    </ul>
+
+    <h2>Permissions Explained</h2>
+    <p>Bananify requests the following permissions and uses them as follows:</p>
+    <ul>
+        <li><strong>activeTab:</strong> Access selected text on the current webpage when you explicitly use the extension</li>
+        <li><strong>storage:</strong> Save settings, encrypted API keys, and generated infographics locally</li>
+        <li><strong>scripting:</strong> Extract clean text content from web pages</li>
+        <li><strong>notifications:</strong> Notify you when infographic generation is complete</li>
+        <li><strong>sidePanel:</strong> Display generation status and progress</li>
+        <li><strong>contextMenus:</strong> Add "Generate Infographic" option to right-click menu</li>
+        <li><strong>clipboardWrite:</strong> Copy generated infographics to clipboard when you click "Copy"</li>
+        <li><strong>tabs:</strong> Access tab URL and title for source tracking</li>
+        <li><strong>identity:</strong> Google Sign-In authentication for backend mode</li>
+        <li><strong>Host Permission (Google Gemini API):</strong> Required to send selected text to Google's API for image generation</li>
+    </ul>
+
+    <h2>Data Retention</h2>
+    <p>Data is retained as follows:</p>
+    <ul>
+        <li><strong>Generated Infographics:</strong> Stored locally until you delete them or uninstall the extension</li>
+        <li><strong>Settings and Preferences:</strong> Stored locally until you change or delete them</li>
+        <li><strong>API Keys:</strong> Stored locally (encrypted) until you remove them</li>
+        <li><strong>Usage Statistics:</strong> Stored locally until you clear history or uninstall</li>
+    </ul>
+    <p>You can delete any or all of this data at any time through the extension settings.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Bananify is not intended for children under 13 years of age. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us to have it removed.</p>
+
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this privacy policy from time to time. The "Last Updated" date at the top of this page indicates when changes were made. We encourage you to review this policy periodically. Continued use of Bananify after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact</h2>
+    <div class="contact">
+        <p>If you have questions or concerns about this privacy policy or how Bananify handles your data, please contact us:</p>
+        <p>
+            <strong>Email:</strong> [Your contact email]<br>
+            <strong>GitHub:</strong> <a href="https://github.com/[your-username]/ChromeNanoBanana" target="_blank">[Your GitHub repository]</a>
+        </p>
+        <p><em>Note: Replace the contact information above with your actual contact details before publishing.</em></p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #E5E7EB;">
+
+    <p style="color: #64748B; font-size: 0.9em; text-align: center;">
+        This privacy policy is effective as of December 23, 2024.
+    </p>
+</body>
+</html>
+
